@@ -1,8 +1,11 @@
 import {Map} from "lucide-react";
 import {Button} from "../ui/button";
 import profilePicture from "@/assets/images/profile_picture.jpg";
+import {useNavigate} from "react-router-dom";
 
 export default function Hero() {
+	const navigate = useNavigate();
+
 	return (
 		<div className="grid grid-cols-2 gap-16 mx-16 my-16 items-center">
 			<hgroup>
@@ -11,7 +14,13 @@ export default function Hero() {
 					I specialize in building high-quality web applications and services. Let's work together
 					to bring your ideas to life!
 				</p>
-				<Button size="lg" className="rounded-full mt-8 text-base">
+				<Button
+					size="lg"
+					onClick={() => {
+						navigate("/about");
+					}}
+					className="rounded-full mt-8 text-base"
+				>
 					About Me
 				</Button>
 			</hgroup>

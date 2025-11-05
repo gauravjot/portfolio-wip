@@ -31,8 +31,15 @@ export default function Skills() {
 
 	return (
 		<div className="flex">
-			<h2 className="text-4xl font-semibold tracking-tight w-[30rem] my-4">My Skills</h2>
+			<div className="my-4 min-w-[20rem] w-[20rem]">
+				<h2 className="text-4xl font-semibold tracking-tight">Technical Skills</h2>
+			</div>
 			<div className="grid grid-cols-2 gap-5">
+				<img
+					src="/img/tech_skills.png"
+					alt="Skills Illustration"
+					className="w-full h-auto rounded-3xl shadow-sm"
+				/>
 				{skills.map((skill) => (
 					<div className="p-6 bg-muted rounded-2xl shadow-sm flex gap-4" key={skill.name}>
 						<div>
@@ -42,7 +49,7 @@ export default function Skills() {
 						</div>
 						<div>
 							<h3 className="text-2xl font-medium tracking-tight mb-2">{skill.name}</h3>
-							<p className="text-muted-foreground text-sm">{skill.description}</p>
+							<p className="text-muted-foreground text-md">{skill.description}</p>
 						</div>
 					</div>
 				))}
