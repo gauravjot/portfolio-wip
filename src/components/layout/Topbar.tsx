@@ -4,6 +4,7 @@ import darkLogo from "@/assets/icons/logo_dark.png";
 import {useTheme} from "../theme-provider";
 import ThemeToggler from "@/components/utils/ThemeToggler";
 import {useNavigate} from "react-router-dom";
+import {Download} from "lucide-react";
 
 export default function Topbar() {
 	const {theme} = useTheme();
@@ -19,7 +20,7 @@ export default function Topbar() {
 				)}
 				<span className="font-medium text-xl">Gauravjot Garaya</span>
 			</div>
-			<div className="flex gap-4 place-items-center">
+			<div className="flex gap-2 place-items-center">
 				{/*} About me page */}
 				<Button
 					variant="ghost"
@@ -30,6 +31,14 @@ export default function Topbar() {
 				>
 					Home
 				</Button>
+				<a
+					href="/artifacts/Gauravjot_Resume-1.pdf"
+					download
+					className="btn rounded-full px-4 py-2 font-medium flex place-items-center hover:bg-secondary hover:text-secondary-foreground text-foreground"
+				>
+					<Download className="mr-2 h-4 w-4" />
+					Resume
+				</a>
 				<Button
 					variant="default"
 					onClick={() => {

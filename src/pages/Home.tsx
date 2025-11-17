@@ -6,6 +6,7 @@ import Skills from "@/components/layout/Skills";
 import Topbar from "@/components/layout/Topbar";
 import TransferrableSkills from "@/components/layout/TransferrableSkills";
 import VisionBoard from "@/components/layout/VisionBoard";
+import {Download} from "lucide-react";
 
 export default function Home() {
 	return (
@@ -19,6 +20,18 @@ export default function Home() {
 			<TransferrableSkills />
 			<ILP />
 			<VisionBoard />
+			<div className="bg-muted rounded-3xl shadow-sm">
+				<a
+					href="/artifacts/Gauravjot_Resume-1.pdf"
+					download
+					className=" text-center mx-auto text-secondary-foreground font-medium"
+				>
+					<div className="flex p-6 hover:bg-accent-700/5 rounded-3xl gap-4 justify-center place-items-center">
+						<Download className="h-6 w-6 text-secondary-foreground" />
+						<span>Download Resume</span>
+					</div>
+				</a>
+			</div>
 			<Footer />
 		</div>
 	);
